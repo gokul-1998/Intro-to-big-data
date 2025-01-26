@@ -1,0 +1,2 @@
+- make a bucket and give access to it
+    - https://discourse.onlinedegree.iitm.ac.in/t/giving-public-access-to-gcp-bucket-guide/143880
