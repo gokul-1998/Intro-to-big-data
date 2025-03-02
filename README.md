@@ -19,3 +19,5 @@ Introduce yourself in the video.
 You don't need to do coding in the video. The video could show the run of the code and the result it produces.
 Explain the logic (how it works) of your code, and/or the approach you took in constructing the solution.
 Please make sure to check the audio after recording the video.
+
+- https://www.youtube.com/@introductiontobigdata
