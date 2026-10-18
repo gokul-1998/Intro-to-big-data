@@ -1,0 +1,9 @@
+# Graded Assignment 1 Week 2
+
+- You are required to use Google Cloud Platform (GCP) to analyze a text file stored in Google Cloud Storage (GCS). 
+
+- The task is to identify the longest line(s) in the file. If multiple lines share the maximum length, all of them should be reported. 
+
+- Spin Up a VM and run the program from your VM.
+
+- Write a Python program that downloads the test file from GCS Bucket, finds the longest line(s) in the file (based on character length), prints the results in terminal and saves the output in GCS Bucket.
