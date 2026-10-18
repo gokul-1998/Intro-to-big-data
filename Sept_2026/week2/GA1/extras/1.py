@@ -44,7 +44,7 @@ def main():
     # python 1.py --bucket <bucket_name> --source <file_path> [--destination <blob_name>]
     upload_to_gcs(
         bucket_name="ibd_bucket_gokul",
-        source_file_path=r"D:\gokul_repos\iitm\Intro-to-big-data\Sept_2026\week2\GA1\input.txt",
+        source_file_path=r"Sept_2026\week2\GA1\input.txt",
         destination_blob_name="wk_1_input.txt"
     )
 
