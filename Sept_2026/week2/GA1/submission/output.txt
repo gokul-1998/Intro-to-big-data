@@ -1,0 +1,11 @@
+============================================================
+              LONGEST LINE ANALYSIS RESULTS
+============================================================
+Source Bucket:       gs://ibd_bucket_gokul/wk_1_input.txt
+Total Lines Scanned: 9
+Maximum Line Length: 204 characters
+Number of Longest Lines: 1
+------------------------------------------------------------
+Match #1 (Line 9, 204 chars):
+  - Write a Python program that downloads the test file from GCS Bucket, finds the longest line(s) in the file (based on character length), prints the results in terminal and saves the output in GCS Bucket.
+------------------------------------------------------------
