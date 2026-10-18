@@ -40,11 +40,13 @@ def main():
 
     # args = parser.parse_args()
 
-    # You can customize these defaults or pass them via CLI flags:
-    # python 1.py --bucket <bucket_name> --source <file_path> [--destination <blob_name>]
+    # Resolve input.txt path relative to this script (works on Linux VM & Windows)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    source_file = os.path.normpath(os.path.join(script_dir, "..", "input.txt"))
+
     upload_to_gcs(
         bucket_name="ibd_bucket_gokul",
-        source_file_path=r"Sept_2026\week2\GA1\input.txt",
+        source_file_path=source_file,
         destination_blob_name="wk_1_input.txt"
     )
 
