@@ -1,0 +1,1 @@
+- gcloud storage cp ./input.txt gs://ibd_bucket_gokul/wk_2_input.txt
