@@ -1,0 +1,4 @@
+- Slowly Changing Dimensions (SCD)
+    - it is a data warehousing concept that refers to the management of dimension data that changes slowly over time. There are different types of SCDs, with Type I and Type II being the most common.
+        - SCD Type I: In this type, when a change occurs in the dimension data, the old data is overwritten with the new data. This means that historical data is lost, and only the most recent information is retained.
+        - SCD Type II: In this type, when a change occurs in the dimension data, the old data is preserved, and a new record is created to reflect the change. This allows for historical tracking of changes over time, enabling analysis of how dimension attributes have evolved.
