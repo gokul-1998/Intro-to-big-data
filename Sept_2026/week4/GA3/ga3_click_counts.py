@@ -6,7 +6,7 @@ Usage (submit to Dataproc):
     gcloud dataproc jobs submit pyspark ga3_click_counts.py \
         --cluster=gokul-s-dataproc-cluster \
         --region=asia-south1 \
-        --project=project-77971f5c-a874-479a-a6c \
+        --project=project-c38127c2-5130-4284-af3 \
         -- gs://YOUR_BUCKET/input/clicks.txt gs://YOUR_BUCKET/output
 """
 

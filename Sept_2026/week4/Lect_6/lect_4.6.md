@@ -27,7 +27,7 @@ Starting today, `Dataproc` is now `Managed Service for Apache Spark`. With Manag
 - Create a dataproc cluster
 ```bash
 gcloud dataproc clusters create gokul-s-dataproc-cluster \
-  --project project-77971f5c-a874-479a-a6c \
+  --project project-c38127c2-5130-4284-af3 \
   --region asia-south1 \
   --single-node \
   --master-machine-type e2-standard-2 \
@@ -52,10 +52,10 @@ gcloud dataproc clusters create gokul-s-dataproc-cluster \
 
 - How to ssh into the dataproc cluster
 
-- `gcloud compute instances list --project=project-77971f5c-a874-479a-a6c`
+- `gcloud compute instances list --project=project-c38127c2-5130-4284-af3`
 
 ```
-gcloud compute ssh gokul-s-dataproc-cluster-m     --zone=asia-south1-c     --tunnel-through-iap     --project=project-77971f5c-a874-479a-a6c
+gcloud compute ssh gokul-s-dataproc-cluster-m     --zone=asia-south1-c     --tunnel-through-iap     --project=project-c38127c2-5130-4284-af3
 ```
 
 - https://github.com/garystafford/dataproc-python-demo
