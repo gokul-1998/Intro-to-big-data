@@ -75,8 +75,10 @@ def process_file(cloud_event):
     content = blob.download_as_text(encoding="utf-8")
 
     # Find longest lines and format
-    max_len, longest_lines, total_lines = find_longest_lines(content)
-    formatted_output = format_results(...)
+    max_length, longest_lines, total_lines = find_longest_lines(content)
+    formatted_output = format_results(
+        bucket_name, file_name, max_length, longest_lines, total_lines
+    )
 
     # Print to Cloud Logging
     print(formatted_output)
