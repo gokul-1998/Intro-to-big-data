@@ -1,0 +1,17 @@
+- OLTP
+    - OLTP stands for `Online Transaction Processing`.
+    - It is a class of systems that `manage transaction-oriented applications`, typically for `data entry and retrieval transaction processing`. 
+    - OLTP systems are `designed to handle a large number of short online transactions (INSERT, UPDATE, DELETE)`.
+    -  The main emphasis for OLTP systems is 
+        - `put on very fast query processing`,
+        -  `maintaining data integrity in multi-access environments`,
+        -  and an `effectiveness measured by the number of transactions per second`.
+
+- OLAP
+    - OLAP stands for `Online Analytical Processing`.
+    - It is a class of systems that `enable users to analyze multidimensional data interactively from multiple perspectives`.
+    - OLAP systems are `designed to handle complex queries and aggregations on large volumes of data`.
+    - The main emphasis for OLAP systems is 
+        - `put on complex calculations`,
+        -  `trend analysis`,
+        -  and an `effectiveness measured by the speed of query response time`.
