@@ -62,7 +62,7 @@ pip install google-cloud-storage
    ```
    *Optional parameters:*
    ```bash
-   python3 ga1_solution.py --bucket ibd_bucket_gokul --input-blob wk_1_input.txt --output-blob output.txt
+   python3 ga1_solution.py --bucket gokul_ibd_bucket --input-blob week_2_ga/input.txt --output-blob week_2_ga/output.txt
    ```
 
 3. **Verify/Download the output file from GCS:**

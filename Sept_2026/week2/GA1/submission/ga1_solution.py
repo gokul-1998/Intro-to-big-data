@@ -68,14 +68,25 @@ def upload_to_gcs(bucket_name: str, source_file_path: str, destination_blob_name
 
 def main():
     parser = argparse.ArgumentParser(description="Find the longest line(s) in a file from GCS.")
-    parser.add_argument("--bucket", default="gokul_ibd_bucket/week_2_ga/", help="GCS bucket name")
-    parser.add_argument("--input-blob", default="input.txt", help="Input file name in GCS")
-    parser.add_argument("--output-blob", default="output.txt", help="Output file name in GCS")
+    parser.add_argument("--bucket", default="gokul_ibd_bucket", help="GCS bucket name")
+    parser.add_argument("--input-blob", default="week_2_ga/input.txt", help="Input file name in GCS")
+    parser.add_argument("--output-blob", default="week_2_ga/output.txt", help="Output file name in GCS")
     args = parser.parse_args()
 
-    bucket_name = args.bucket
-    input_blob_name = args.input_blob
-    output_blob_name = args.output_blob
+    # Parse and clean bucket and blob names (handle accidental 'gs://' or 'bucket/path/' in --bucket)
+    raw_bucket = args.bucket.strip()
+    if raw_bucket.startswith("gs://"):
+        raw_bucket = raw_bucket[5:]
+    raw_bucket = raw_bucket.strip("/")
+
+    if "/" in raw_bucket:
+        bucket_name, prefix = raw_bucket.split("/", 1)
+        input_blob_name = f"{prefix}/{args.input_blob.lstrip('/')}"
+        output_blob_name = f"{prefix}/{args.output_blob.lstrip('/')}"
+    else:
+        bucket_name = raw_bucket
+        input_blob_name = args.input_blob.strip()
+        output_blob_name = args.output_blob.strip()
 
     # Local file paths (stored in the same directory as this script)
     script_dir = os.path.dirname(os.path.abspath(__file__))
