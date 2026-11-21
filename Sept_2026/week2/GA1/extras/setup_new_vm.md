@@ -9,7 +9,7 @@
     gcloud auth application-default login --no-launch-browser
     ```
 
-- Download `output.txt` from `gs://ibd_bucket_gokul/output.txt` via GCP Console or CLI:
+- Download `output.txt` from `gs://gokul_ibd_bucket/output.txt` via GCP Console or CLI:
     ```
-    gsutil cp gs://ibd_bucket_gokul/output.txt .
+    gsutil cp gs://gokul_ibd_bucket/output.txt .
     ```

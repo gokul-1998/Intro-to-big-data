@@ -45,7 +45,7 @@ def main():
     source_file = os.path.normpath(os.path.join(script_dir, "..", "input.txt"))
 
     upload_to_gcs(
-        bucket_name="ibd_bucket_gokul",
+        bucket_name="gokul_ibd_bucket",
         source_file_path=source_file,
         destination_blob_name="wk_1_input.txt"
     )

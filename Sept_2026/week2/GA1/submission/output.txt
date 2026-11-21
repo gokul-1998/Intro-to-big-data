@@ -1,7 +1,7 @@
 ============================================================
               LONGEST LINE ANALYSIS RESULTS
 ============================================================
-Source Bucket:       gs://ibd_bucket_gokul/wk_1_input.txt
+Source Bucket:       gs://gokul_ibd_bucket/wk_1_input.txt
 Total Lines Scanned: 9
 Maximum Line Length: 204 characters
 Number of Longest Lines: 1

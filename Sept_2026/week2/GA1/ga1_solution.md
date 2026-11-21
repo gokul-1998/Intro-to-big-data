@@ -8,10 +8,10 @@ Viewed ga1_solution.py:1-124
 I have created the complete assignment solution script in [ga1_solution.py](file:///d:/gokul_repos/iitm/Intro-to-big-data/Sept_2026/week2/GA1/ga1_solution.py).
 
 ### How it fulfills all assignment requirements:
-1. **Downloads the file from GCS**: Pulls `wk_1_input.txt` from bucket `ibd_bucket_gokul`.
+1. **Downloads the file from GCS**: Pulls `wk_1_input.txt` from bucket `gokul_ibd_bucket`.
 2. **Finds longest line(s)**: Calculates character lengths (stripping newline characters). If multiple lines share the maximum length, all are reported along with their line numbers.
 3. **Prints results to terminal**: Formats and prints a clean summary and the line contents to stdout.
-4. **Saves output to GCS**: Saves the formatted report to a local `output.txt` and uploads it to `gs://ibd_bucket_gokul/output.txt`.
+4. **Saves output to GCS**: Saves the formatted report to a local `output.txt` and uploads it to `gs://gokul_ibd_bucket/output.txt`.
 
 ---
 
@@ -22,7 +22,7 @@ Pull the changes or run directly:
 git pull
 ```
 
-Run with the default settings (`ibd_bucket_gokul` & `wk_1_input.txt`):
+Run with the default settings (`gokul_ibd_bucket` & `wk_1_input.txt`):
 ```bash
 python3 ga1_solution.py
 ```
@@ -36,7 +36,7 @@ python3 ga1_solution.py --bucket gokul_ibd_bucket --input-blob week_2_ga/input.t
 
 ### For Submission:
 - **Code file**: [ga1_solution.py](file:///d:/gokul_repos/iitm/Intro-to-big-data/Sept_2026/week2/GA1/ga1_solution.py)
-- **Output file**: Download `output.txt` from `gs://ibd_bucket_gokul/output.txt` via GCP Console or CLI:
+- **Output file**: Download `output.txt` from `gs://gokul_ibd_bucket/output.txt` via GCP Console or CLI:
   ```bash
-  gsutil cp gs://ibd_bucket_gokul/output.txt .
+  gsutil cp gs://gokul_ibd_bucket/output.txt .
   ```
