@@ -68,8 +68,8 @@ def upload_to_gcs(bucket_name: str, source_file_path: str, destination_blob_name
 
 def main():
     parser = argparse.ArgumentParser(description="Find the longest line(s) in a file from GCS.")
-    parser.add_argument("--bucket", default="ibd_bucket_gokul", help="GCS bucket name")
-    parser.add_argument("--input-blob", default="wk_1_input.txt", help="Input file name in GCS")
+    parser.add_argument("--bucket", default="gokul_ibd_bucket/week_2_ga/", help="GCS bucket name")
+    parser.add_argument("--input-blob", default="input.txt", help="Input file name in GCS")
     parser.add_argument("--output-blob", default="output.txt", help="Output file name in GCS")
     args = parser.parse_args()
 
