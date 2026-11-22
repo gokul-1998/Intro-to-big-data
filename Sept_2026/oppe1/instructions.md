@@ -48,13 +48,13 @@ gcloud storage cp oppe1_pyspark.py gs://${BUCKET_NAME}/scripts/oppe1_pyspark.py
 
 ---
 
-### Step 2: Create / Verify Dataproc Cluster
-If you do not have an active Dataproc cluster, create a single-node cluster in `us-east1` (or your preferred region):
+### Step 2: Create / Verify Dataproc Cluster in asia-south1
+If you do not have an active Dataproc cluster, create a single-node cluster in `asia-south1`:
 
 ```bash
-gcloud dataproc clusters create oppe1-cluster \
-  --project=${PROJECT_ID} \
-  --region=us-east1 \
+gcloud dataproc clusters create gokul-s-dataproc-cluster \
+  --project=project-c38127c2-5130-4284-af3 \
+  --region=asia-south1 \
   --single-node \
   --master-machine-type=e2-standard-2 \
   --master-boot-disk-size=50GB \
@@ -63,17 +63,17 @@ gcloud dataproc clusters create oppe1-cluster \
 
 ---
 
-### Step 3: Submit the PySpark Job on Dataproc
+### Step 3: Submit the PySpark Job on Dataproc (asia-south1)
 Submit the PySpark job:
 
 ```bash
-gcloud dataproc jobs submit pyspark gs://${BUCKET_NAME}/scripts/oppe1_pyspark.py \
-  --cluster=oppe1-cluster \
-  --region=us-east1 \
-  --project=${PROJECT_ID} \
+gcloud dataproc jobs submit pyspark gs://gokul_ibd_bucket/scripts/oppe1_pyspark.py \
+  --cluster=gokul-s-dataproc-cluster \
+  --region=asia-south1 \
+  --project=project-c38127c2-5130-4284-af3 \
   -- \
-  gs://${BUCKET_NAME}/input/Train_details_22122017.csv \
-  gs://${BUCKET_NAME}/output/station_summary
+  gs://gokul_ibd_bucket/input/Train_details_22122017.csv \
+  gs://gokul_ibd_bucket/output/station_summary
 ```
 
 During execution, the Dataproc job will output the formatted tables for Section A and Section B, and save the aggregated CSV to `gs://${BUCKET_NAME}/output/station_summary/`.
